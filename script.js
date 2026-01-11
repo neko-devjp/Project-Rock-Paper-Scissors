@@ -57,16 +57,62 @@ function playRound(humanSelect, computerSelect) {
   } else if (humanSelect === 'scissors' && computerSelect === 'scissors') {
     return 'あいこです。 引き分けです！';
   } else if (humanSelect === 'rock' && computerSelect === 'scissors') {
+    humanScore++;
     return 'あなたの勝ちです！おめでとう！';
   } else if (humanSelect === 'scissors' && computerSelect === 'paper') {
+    humanScore++;
     return 'あなたの勝ちです！おめでとう！';
   } else if (humanSelect === 'paper' && computerSelect === 'rock') {
+    humanScore++;
     return 'あなたの勝ちです！おめでとう！';
   } else if (humanSelect === 'rock' && computerSelect === 'paper') {
+    computerScore++;
     return 'あなたの負けです…';
   } else if (humanSelect === 'scissors' && computerSelect === 'rock') {
+    computerScore++;
     return 'あなたの負けです…';
   } else if (humanSelect === 'paper' && computerSelect === 'scissors') {
+    computerScore++;
     return 'あなたの負けです…';
+  }
+}
+
+// Step 6: Write the logic to play the entire game
+// ステップ6: ゲーム全体をプレイするためのロジックを書く
+// playGame関数
+
+function playGame() {
+  humanScore = 0;
+  computerScore = 0;
+  // 1試合目
+  computerChoice = getComputerChoice();
+  humanChoice = getHumanChoice();
+  playRound(humanChoice, computerChoice);
+  // 2試合目
+  computerChoice = getComputerChoice();
+  humanChoice = getHumanChoice();
+  playRound(humanChoice, computerChoice);
+  // ３試合目
+  computerChoice = getComputerChoice();
+  humanChoice = getHumanChoice();
+  playRound(humanChoice, computerChoice);
+  // 4試合目
+  computerChoice = getComputerChoice();
+  humanChoice = getHumanChoice();
+  playRound(humanChoice, computerChoice);
+  // 5試合目
+  computerChoice = getComputerChoice();
+  humanChoice = getHumanChoice();
+  playRound(humanChoice, computerChoice);
+
+  if (humanScore > computerScore) {
+    return `あなた${humanScore}点、cpu${computerScore}点
+    あなたの勝ちです！ おめでとう！`;
+  } else if (humanScore < computerScore) {
+    return `あなた${humanScore}点、cpu${computerScore}点
+    あなたの負けです！ また挑戦してね！`;
+  } else if (humanScore === computerScore) {
+    return `あなた${humanScore}点、cpu${computerScore}点
+    引き分けです！ いい勝負でした！`;
   }
 }
