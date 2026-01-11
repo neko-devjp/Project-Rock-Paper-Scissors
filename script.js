@@ -20,3 +20,12 @@ function getComputerChoice() {
     return 'scissors';
   }
 }
+
+// Step 3: 人間の手を入力してもらう（getHumanChoice）
+// getHumanChoice という名前の新しい関数を作る
+// ユーザーの入力に応じて 有効な手を return する("rock", "paper", "scissors")
+
+function getHumanChoice() {
+  let humanChoice = prompt('rock, paper or scissors');
+  return humanChoice;
+}
