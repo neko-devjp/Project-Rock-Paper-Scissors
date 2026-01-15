@@ -3,9 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="game-container">
+      <p class="score">
+        Player :
+        <span class="score-value">0</span>
+        vs Computer :
+        <span class="score-value">0</span>
+      </p>
+      <div class="choices-container">
+        <img src="/img/rock.png" alt="" />
+        <img src="img/paper.png" alt="" />
+        <img src="img/scissors.png" alt="" />
+      </div>
+      <p class="status-message">Make your move to begin</p>
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>

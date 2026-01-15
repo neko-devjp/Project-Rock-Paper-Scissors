@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.score {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+.score-value {
+  font-weight: 600;
+}
+
+.status-message {
+  width: 100%;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #808080;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+}
